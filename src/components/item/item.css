@@ -4,10 +4,12 @@
   flex-direction: column;
   gap: 12px;
   padding: 12px;
+  width: 100%;
   min-height: max-content;
   border: 1px solid var(--gray-200);
   border-radius: 16px;
   overflow: hidden;
+  transition: var(--transition);
 }
 
 .item .main-info {
@@ -152,12 +154,16 @@
   top: 0;
   padding: 12px;
   height: 100%;
+  min-height: max-content;
   border-left: 1px solid var(--gray-200);
   background-color: var(--white);
   transition: var(--transition);
 }
 .item .main-info .details .top .first-row .actions-wrapper .actions.visible {
   right: 0px;
+}
+.item:has(.actions.visible) {
+  min-height: 144px;
 }
 
 .item .main-info .details .top .poc {
@@ -204,67 +210,74 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .item {
-    max-width: 350px;
-    min-width: 288px;
-    padding-bottom: 60px;
+  .item .main-info .img-container {
+    display: none;
   }
-  .item .main-info {
-    flex-direction: column;
-    align-items: center;
+
+  .item .main-info .details .top {
     gap: 6px;
   }
-  .item .main-info .img-container {
-    width: 100%;
-    height: 200px;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  .item .main-info .details .top .first-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 0px;
-    margin-bottom: 6px;
-  }
+
   .item .main-info .details .top .first-row .title-container {
-    flex-direction: column;
-    gap: 0px;
+    gap: 12px;
   }
+
   .item .main-info .details .top .first-row .title-container .title {
-    text-align: center;
+    font-size: var(--text-md);
+    line-height: var(--line-height-md);
   }
-  .item .main-info .details .top .first-row .title-container .status-info {
-    width: 100%;
-    height: unset;
-    justify-content: center;
-  }
-  .item .main-info .details .top .first-row .actions-wrapper {
-    position: absolute;
-    bottom: 12px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-  .item .main-info .details .top .first-row .actions-wrapper .open-actions-btn {
+
+  .item
+    .main-info
+    .details
+    .top
+    .first-row
+    .title-container
+    .status-info {
+      height: var(--line-height-md);
+    }
+
+  .item
+    .main-info
+    .details
+    .top
+    .first-row
+    .title-container
+    .status-info
+    .status {
     display: none;
   }
-  .item .main-info .details .top .first-row .actions-wrapper .actions {
-    flex-direction: row;
-    border: unset;
-    height: fit-content;
-    top: unset;
-    bottom: 0px;
-    right: unset;
-    transform: none;
-    padding: 0px;
+  .item:has(.status[data-value="0"]),
+  .item:has(.status[data-value="0"])
+    .main-info
+    .details
+    .top
+    .first-row
+    .actions-wrapper
+    .actions {
+    background-color: var(--yellow-50);
+    border-color: var(--yellow-400);
   }
-  .item .main-info .details .top .poc {
-    justify-content: center;
+  .item:has(.status[data-value="1"]),
+  .item:has(.status[data-value="1"])
+    .main-info
+    .details
+    .top
+    .first-row
+    .actions-wrapper
+    .actions {
+    background-color: var(--teal-50);
+    border-color: var(--teal-400);
   }
-  .item .main-info .details .materials {
-    display: none;
-  }
-  .item .notes {
-    display: none;
+  .item:has(.status[data-value="2"]),
+  .item:has(.status[data-value="2"])
+    .main-info
+    .details
+    .top
+    .first-row
+    .actions-wrapper
+    .actions {
+    background-color: var(--red-50);
+    border-color: var(--red-400);
   }
 }
