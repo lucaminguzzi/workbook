@@ -222,22 +222,26 @@ export default function Item({ data }) {
                 </div>
               </div>
               <ul className="poc">
-                <li>
-                  <span>{dateFormatted}</span>
+                <li className="poc-info">
+                  <div className="marker" />
+                  <span className="content">{dateFormatted}</span>
                 </li>
                 {data.poc[0].name.length > 0 && (
-                  <li>
-                    <span>{data.poc[0].name}</span>
+                  <li className="poc-info">
+                    <div className="marker" />
+                    <span className="content">{data.poc[0].name}</span>
                   </li>
                 )}
                 {data.poc[0].phone.length > 0 && (
-                  <li>
-                    <span>{data.poc[0].phone}</span>
+                  <li className="poc-info">
+                    <div className="marker" />
+                    <span className="content">{data.poc[0].phone}</span>
                   </li>
                 )}
                 {data.poc[0].email.length > 0 && (
-                  <li>
-                    <span>{data.poc[0].email}</span>
+                  <li className="poc-info">
+                    <div className="marker" />
+                    <span className="content">{data.poc[0].email}</span>
                   </li>
                 )}
               </ul>

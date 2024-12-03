@@ -171,17 +171,22 @@
   flex-wrap: wrap;
   gap: 4px 12px;
   padding-inline-start: 0px;
-  list-style-type: circle;
-  list-style-position: inside;
 }
 
-.item .main-info .details .top .poc li::marker {
-  color: var(--teal-400);
-  font-size: 18px;
+.item .main-info .details .top .poc .poc-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
-.item .main-info .details .top .poc li span {
-  margin-left: -14px;
+.item .main-info .details .top .poc .poc-info .marker {
+  width: 6px;
+  height: 6px;
+  border-radius: 12px;
+  border: 1px solid var(--teal-400);
+}
+
+.item .main-info .details .top .poc .poc-info .content {
   color: var(--gray-900);
   font-size: var(--text-md);
   line-height: var(--line-height-md);

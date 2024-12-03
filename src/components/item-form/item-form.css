@@ -67,7 +67,7 @@
 
 @media only screen and (max-width: 767px) {
   .form-page form {
-    padding: 0px 12px 12px 12px;
+    padding: 0px 12px 24px 12px;
   }
   .form-page form .row,
   .form-page form .row .poc-row {
