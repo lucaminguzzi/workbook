@@ -16,7 +16,19 @@
 
 .log-in-page .log-in-card .logo-container {
   display: flex;
-  width: 150px;
+  gap: 12px;
+}
+.log-in-page .log-in-card .logo-container img {
+  min-width: unset;
+  min-height: unset;
+  width: 25px;
+  height: 25px;
+}
+.log-in-page .log-in-card .logo-container .app-title {
+  color: var(--teal-400);
+  font-size: var(--text-xl);
+  line-height: var(--line-height-xl);
+  font-weight: 800;
 }
 
 .log-in-page .log-in-card form {

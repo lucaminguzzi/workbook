@@ -67,7 +67,8 @@ export default function Login() {
     <div className="log-in-page">
       <div className="log-in-card">
         <div className="logo-container">
-          <img src="./images/logo.png" alt="logo" />
+          <img src="./images/logo.svg" alt="logo" />
+          <h1 className="app-title">Workbook</h1>
         </div>
         <form onSubmit={logInHandler}>
           <Field
