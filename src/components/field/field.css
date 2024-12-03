@@ -47,7 +47,6 @@
   border: 1px solid var(--gray-300);
   border-radius: 24px;
   width: 300px;
-  min-height: calc(var(--line-height-md) + 12px);
 }
 .field .field-wrapper .field-container:has(textarea) {
   border-radius: 12px;
@@ -90,6 +89,7 @@
   z-index: 1;
   background-color: transparent;
   width: 100%;
+  min-height: var(--line-height-md);
 }
 
 .field .field-wrapper .field-container input::placeholder,
@@ -104,7 +104,6 @@
 
 .field .field-wrapper .field-container textarea {
   padding-right: 4px;
-  min-height: 30px;
 }
 
 .field .field-wrapper .field-container:has(input:focus) .icon:not(.active) {
