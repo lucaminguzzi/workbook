@@ -47,6 +47,7 @@
   border: 1px solid var(--gray-300);
   border-radius: 24px;
   width: 300px;
+  min-height: calc(var(--line-height-md) + 12px);
 }
 .field .field-wrapper .field-container:has(textarea) {
   border-radius: 12px;

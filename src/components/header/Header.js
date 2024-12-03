@@ -57,7 +57,7 @@ export default function Header() {
         </Modal>
       )}
       <div className="logo-container">
-        <img src="./images/logo.svg" alt="logo" />
+        <img src={`${process.env.PUBLIC_URL}/images/logo.svg`} alt="logo" />
         <h1 className="app-title">Workbook</h1>
       </div>
       <Field>
@@ -88,11 +88,11 @@ export default function Header() {
         </button>
         <button
           type="button"
-          className="color red"
+          className="icon-btn border red"
           onClick={() => setIsLoggingOut(true)}
         >
           <IconContext.Provider
-            value={{ style: { width: "24px", height: "auto" } }}
+            value={{ style: { transform: "scale(1.1)" } }}
           >
             <FiLogOut />
           </IconContext.Provider>

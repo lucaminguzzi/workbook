@@ -148,7 +148,7 @@ export default function ItemsList() {
     <ul className="items-list">
       {filtered.length === 0 ? (
         <div className="empty-list">
-          <img src="./images/thinking.svg" alt="thinking-image" />
+          <img src={`${process.env.PUBLIC_URL}/images/thinking.svg`} alt="thinking-image" />
           <p>
             Hmm, nessun {ui.page === "works" ? "lavoro " : "preventivo "}
             {items.length === 0 ? "è ancora stato inserito" : "è stato trovato"}

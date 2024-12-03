@@ -46,7 +46,4 @@ header .btns {
   header .logo-container {
     display: none;
   }
-  header .btns {
-    gap: 6px;
-  }
 }

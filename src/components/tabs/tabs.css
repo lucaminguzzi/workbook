@@ -29,3 +29,9 @@
 .tabs .tab.active .circle {
   opacity: 1;
 }
+
+@media only screen and (max-width: 767px) {
+  .tabs {
+    gap: 12px;
+  }
+}

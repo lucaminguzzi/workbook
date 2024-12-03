@@ -3,6 +3,9 @@
   flex-direction: column;
 }
 
+.form-page .page-header {
+  align-items: baseline;
+}
 .form-page .page-header .tabs {
   width: 100%;
 }

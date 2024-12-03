@@ -25,6 +25,7 @@
   max-width: 100%;
 }
 .items-list .empty-list p {
+  text-align: center;
   font-size: var(--text-md);
   line-height: var(--line-height-md);
 }
