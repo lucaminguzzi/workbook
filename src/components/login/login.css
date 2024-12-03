@@ -42,3 +42,9 @@
   margin-top: 12px;
   width: max-content;
 }
+
+@media only screen and (max-width: 767px) {
+  .log-in-page {
+    padding: 12px;
+  }
+}
