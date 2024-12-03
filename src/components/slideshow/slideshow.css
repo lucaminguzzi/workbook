@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   width: calc(100vw - 168px);
-  height: 100%;
+  height: calc(100% - 120px);
   overflow-x: auto;
   overflow-y: hidden;
 }
@@ -37,13 +37,14 @@
   align-items: center;
   gap: 24px;
   width: max-content;
+  height: 100%;
 }
 
 #slideshow-root .slideshow .view-box .images .img-container {
   position: relative;
   display: flex;
   align-items: center;
-  height: calc(100% - 120px);
+  height: 100%;
   max-width: calc(100vw - 168px);
   width: max-content;
   overflow: hidden;
@@ -90,15 +91,15 @@
   }
   #slideshow-root .slideshow .view-box {
     width: calc(100vw - 120px);
+    height: calc(100% - 64px);
   }
   #slideshow-root .slideshow .view-box .images {
     gap: 12px;
   }
   #slideshow-root .slideshow .view-box .images .img-container {
-    height: calc(100% - 64px);
     max-width: calc(100vw - 120px);
   }
   #slideshow-root .slideshow .bullets {
-    bottom: 16px;
+    bottom: 12px;
   }
 }
