@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
   animation: .2s forwards alternate opacity;
   z-index: 4;
@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   background-color: var(--white);
-  height: 100vh;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 5;
