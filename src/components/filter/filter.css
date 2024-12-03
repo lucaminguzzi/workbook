@@ -1,0 +1,17 @@
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 300px;
+}
+
+.filter-container .row {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  width: 100%;
+}
+
+.filter-container .row .field {
+  width: calc(50% - 6px);
+}

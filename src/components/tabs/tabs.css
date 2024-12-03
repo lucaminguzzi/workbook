@@ -1,0 +1,31 @@
+.tabs {
+  display: flex;
+  gap: 24px;
+}
+
+.tabs .tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.tabs .tab button {
+  color: var(--gray-900);
+  transition: var(--transition);
+}
+.tabs .tab .circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 12px;
+  background-color: var(--teal-400);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.tabs .tab.active button {
+  font-weight: 600;
+}
+.tabs .tab.active .circle {
+  opacity: 1;
+}

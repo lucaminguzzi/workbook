@@ -1,0 +1,52 @@
+header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  background-color: var(--white);
+}
+
+header .logo-container {
+  display: flex;
+  gap: 12px;
+}
+
+header .logo-container img {
+  min-width: unset;
+  min-height: unset;
+  width: 25px;
+  height: 25px;
+}
+header .logo-container .app-title {
+  color: var(--teal-400);
+  font-size: var(--text-xl);
+  line-height: var(--line-height-xl);
+  font-weight: 800;
+}
+
+header .field {
+  width: 100%;
+}
+
+header .field .field-wrapper .field-container {
+  width: 100%;
+}
+
+header .btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    gap: 12px;
+    padding: 12px;
+  }
+  header .logo-container {
+    display: none;
+  }
+  header .btns {
+    gap: 6px;
+  }
+}

@@ -1,0 +1,103 @@
+#slideshow-root .slideshow-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#slideshow-root .slideshow {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 24px;
+  gap: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+#slideshow-root .slideshow .view-box {
+  width: calc(100vw - 168px);
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+#slideshow-root .slideshow .view-box::-webkit-scrollbar {
+  display: none;
+}
+
+#slideshow-root .slideshow .view-box .images {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: max-content;
+}
+
+#slideshow-root .slideshow .view-box .images .img-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 120px);
+  max-width: calc(100vw - 168px);
+  width: max-content;
+  overflow: hidden;
+}
+
+#slideshow-root .slideshow .view-box .images .img-container img {
+  max-width: 100%;
+  max-height: 100%;
+  min-width: unset;
+  min-height: unset;
+  filter: grayscale(100%);
+}
+
+#slideshow-root .slideshow .view-box .images .img-container.active img {
+  filter: grayscale(0%);
+}
+
+#slideshow-root .slideshow .bullets {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  bottom: -24px;
+}
+
+#slideshow-root .slideshow .bullets .bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: var(--teal-400);
+  opacity: .5;
+}
+
+#slideshow-root .slideshow .bullets .bullet.active {
+  width: 8px;
+  height: 8px;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  #slideshow-root .slideshow {
+    padding: 0px 12px;
+    gap: 12px;
+  }
+  #slideshow-root .slideshow .view-box {
+    width: calc(100vw - 120px);
+  }
+  #slideshow-root .slideshow .view-box .images {
+    gap: 12px;
+  }
+  #slideshow-root .slideshow .view-box .images .img-container {
+    height: calc(100vh - 64px);
+    max-width: calc(100vw - 120px);
+  }
+  #slideshow-root .slideshow .bullets {
+    bottom: -20px;
+  }
+}

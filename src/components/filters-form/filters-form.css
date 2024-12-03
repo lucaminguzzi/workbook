@@ -1,0 +1,9 @@
+#filters-form {
+  padding: 0px 24px;
+}
+
+@media only screen and (max-width: 767px) {
+  #filters-form {
+    padding: 0px 12px;
+  }
+}

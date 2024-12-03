@@ -1,0 +1,124 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: max-content;
+}
+
+.field:has(textarea) {
+  width: unset;
+}
+
+.field .field-label,
+.field input,
+.field select,
+.field textarea {
+  color: var(--gray-900);
+  font-size: var(--text-md);
+  line-height: var(--line-height-md);
+}
+
+.field .field-wrapper, .field .field-wrapper .field-btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.field .field-wrapper.password-wrapper {
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+.field .field-wrapper.password-wrapper .forgot-password-btn {
+  position: absolute;
+  font-size: var(--text-xs);
+  line-height: var(--line-height-xs);
+  top: -18px;
+}
+
+.field .field-wrapper .field-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--gray-300);
+  border-radius: 24px;
+  width: 300px;
+}
+.field .field-wrapper .field-container:has(textarea) {
+  border-radius: 12px;
+  padding-right: 4px;
+  width: 100%;
+}
+
+.field .field-wrapper .field-container::after {
+  position: absolute;
+  width: calc(100% - 52px);
+  height: calc(100% - 12px);
+  top: 0px;
+  left: var(--after-left, 0);
+  padding: 6px 8px 6px 12px;
+  content: attr(data-placeholder);
+  pointer-events: none;
+  color: var(--gray-400);
+  font-size: var(--text-md);
+  line-height: var(--line-height-md);
+  font-weight: 300;
+  z-index: 0;
+}
+
+.field .field-wrapper .field-container .icon {
+  color: var(--gray-300);
+  width: max-content;
+  pointer-events: none;
+}
+.field .field-wrapper .field-container .icon.active {
+  color: var(--teal-400);
+}
+
+.field .field-wrapper .field-container input,
+.field .field-wrapper .field-container select,
+.field .field-wrapper .field-container textarea {
+  position: relative;
+  border: none;
+  font-weight: 300;
+  padding: 0;
+  z-index: 1;
+  background-color: transparent;
+  width: 100%;
+}
+
+.field .field-wrapper .field-container input::placeholder,
+.field .field-wrapper .field-container select::placeholder,
+.field .field-wrapper .field-container textarea::placeholder {
+  color: var(--gray-300);
+}
+
+.field .field-wrapper .field-container select {
+  padding: 2px 0px;
+}
+
+.field .field-wrapper .field-container textarea {
+  padding-right: 4px;
+  min-height: 30px;
+}
+
+.field .field-wrapper .field-container:has(input:focus) .icon:not(.active) {
+  color: var(--gray-400);
+}
+
+.field:has(.field-error) .field-wrapper .field-container {
+  border-color: var(--red-300);
+}
+
+.field .field-error {
+  font-size: var(--text-xs);
+  line-height: var(--line-height-xs);
+  font-weight: 400;
+  color: var(--red-400);
+  min-height: var(--line-height-xs);
+  margin-top: -4px;
+}

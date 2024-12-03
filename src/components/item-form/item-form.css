@@ -1,0 +1,86 @@
+.form-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-page .page-header .tabs {
+  width: 100%;
+}
+
+.form-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0px 24px 24px 24px;
+}
+
+.form-page form .row,
+.form-page form .row .poc-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  width: 100%;
+}
+
+.form-page form .row {
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.form-page form .row:has(.field-error) {
+  padding-bottom: 12px;
+}
+
+.form-page form .client-row .field .field-wrapper .field-container {
+  width: 650px;
+}
+
+.form-page form .materials-row {
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-page form .materials-row .materials-label {
+  margin: 0 0 6px 0;
+  color: var(--gray-900);
+  font-size: var(--text-md);
+  line-height: var(--line-height-md);
+}
+
+.form-page form .materials-row .materials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.form-page form .btns {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+@media only screen and (max-width: 767px) {
+  .form-page form {
+    padding: 0px 12px 12px 12px;
+  }
+  .form-page form .row,
+  .form-page form .row .poc-row {
+    gap: 12px;
+  }
+  .form-page form .row {
+    padding-bottom: 12px;
+  }
+  .form-page form .row:has(.poc-row) {
+    gap: 24px;
+  }
+  .form-page form .row .poc-row .field .field-wrapper {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .form-page form .client-row .field .field-wrapper .field-container {
+    width: 300px;
+  }
+}

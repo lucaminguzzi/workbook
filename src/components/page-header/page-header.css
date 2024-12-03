@@ -1,0 +1,24 @@
+.page-header {
+  position: sticky;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px;
+  top: 0;
+  background-color: var(--white);
+  z-index: 2;
+}
+
+.page-header .title {
+  color: var(--teal-400);
+  font-size: var(--text-2xl);
+  line-height: var(--line-height-2xl);
+}
+
+@media only screen and (max-width: 767px) {
+  .page-header {
+    gap: 12px;
+    padding: 12px;
+  }
+}

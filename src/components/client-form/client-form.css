@@ -1,0 +1,27 @@
+#client-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0px 24px 24px 24px;
+}
+
+#client-form .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+#client-form > button {
+  width: max-content;
+  margin-top: 12px;
+}
+
+@media only screen and (max-width: 767px) {
+  #client-form {
+    gap: 12px;
+    padding: 0px 12px 12px 12px;
+  }
+  #client-form .field, #client-form .field .field-wrapper, #client-form .field .field-wrapper .field-container {
+    width: 100%;
+  }
+}
