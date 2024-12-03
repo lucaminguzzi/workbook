@@ -13,6 +13,7 @@
 .field input,
 .field select,
 .field textarea {
+  text-align: start;
   color: var(--gray-900);
   font-size: var(--text-md);
   line-height: var(--line-height-md);

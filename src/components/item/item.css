@@ -219,6 +219,10 @@
     display: none;
   }
 
+  .item .main-info .details {
+    gap: 12px;
+  }
+
   .item .main-info .details .top {
     gap: 6px;
   }
@@ -284,5 +288,9 @@
     .actions {
     background-color: var(--red-50);
     border-color: var(--red-400);
+  }
+
+  .item .notes {
+    display: none;
   }
 }
