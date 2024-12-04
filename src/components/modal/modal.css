@@ -30,32 +30,39 @@
   display: none;
 }
 
-#modal-root .modal .delete-alert {
+#modal-root .modal .alert {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 12px 24px;
 }
 
-#modal-root .modal .delete-alert h3, #modal-root .modal .delete-alert p {
+#modal-root .modal .alert h3, #modal-root .modal .alert p {
   width: 100%;
   text-align: center;
 }
 
-#modal-root .modal .delete-alert h3 {
+#modal-root .modal .alert h3 {
   font-size: var(--text-xl);
   line-height: var(--line-height-xl);
-  color: var(--red-400);
   font-weight: 700;
 }
 
-#modal-root .modal .delete-alert p {
+#modal-root .modal .alert.delete h3 {
+  color: var(--red-400);
+}
+
+#modal-root .modal .alert.success h3 {
+  color: var(--teal-400);
+}
+
+#modal-root .modal .alert p {
   font-size: var(--text-md);
   line-height: var(--line-height-md);
   color: var(--gray-900);
 }
 
-#modal-root .modal .delete-alert .btns {
+#modal-root .modal .alert .btns {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,7 +100,7 @@
     border-radius: 16px;
     animation: .3s forwards alternate top-move-in-smd;
   }
-  #modal-root .modal .delete-alert {
+  #modal-root .modal .alert {
     padding: 12px;
   }
 }

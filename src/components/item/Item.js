@@ -97,7 +97,7 @@ export default function Item({ data }) {
     <>
       {isModalOpen && (
         <Modal onClose={() => setIsModalOpen(false)}>
-          <div className="delete-alert">
+          <div className="alert delete">
             <h3>Elimina {data.type === "work" ? "lavoro" : "preventivo"}</h3>
             <p>
               Procedendo con l'operazione il{" "}

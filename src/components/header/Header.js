@@ -34,7 +34,7 @@ export default function Header() {
     <header>
       {isLoggingOut && (
         <Modal onClose={() => setIsLoggingOut(false)}>
-          <div className="delete-alert">
+          <div className="alert delete">
             <h3>Log-out</h3>
             <p>Effettuando il log-out tornerai alla schermata di accesso</p>
             <div className="btns">
